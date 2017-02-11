@@ -40,6 +40,7 @@
 #include "cinder/vr/Context.h"
 #include "cinder/vr/oculus/DeviceManager.h"
 #include "cinder/vr/openvr/DeviceManager.h"
+#include "cinder/vr/psvr/DeviceManager.h"
 #include "cinder/Log.h"
 
 #include <algorithm>
@@ -205,6 +206,19 @@ void initialize( ci::vr::ApiFlags apiFlags )
 				CI_LOG_W( "HTC Vive device manager registration failed: " << e.what() );
 			}
 		}
+#endif
+        
+#if defined( CINDER_VR_ENABLE_PSVR )
+        if( ci::vr::API_OPENVR == ( apiFlags & ci::vr::API_PSVR ) ) {
+            try {
+                ci::vr::psvr::DeviceManager* deviceManager = new ci::vr::psvr::DeviceManager( sEnvironment.get() );
+                deviceManager->initialize();
+                sEnvironment->registerDevice( ci::vr::API_PSVR, deviceManager, true );
+            }
+            catch( const std::exception& e ) {
+                CI_LOG_W( "Playstation VR device manager registration failed: " << e.what() );
+            }
+        }
 #endif
 	}
 }

@@ -24,7 +24,7 @@
 #include "cinder/vr/psvr/Hmd.h"
 #include "cinder/vr/psvr/Context.h"
 #include "cinder/vr/psvr/DeviceManager.h"
-#include "cinder/vr/psvr/psvrapi.h"
+#include "psvrapi.h"
 
 #if defined( CINDER_VR_ENABLE_PSVR )
 
@@ -118,7 +118,7 @@ const std::string kDistortionShadeFragment =
 // -------------------------------------------------------------------------------------------------
 // Hmd
 // -------------------------------------------------------------------------------------------------
-Hmd::Hmd( ci::vr::psvr::Context* context )
+/*Hmd::Hmd( ci::vr::psvr::Context* context )
 	: ci::vr::Hmd( context ), mContext( context )
 {
 	mNearClip = context->getSessionOptions().getNearClip();
@@ -126,7 +126,7 @@ Hmd::Hmd( ci::vr::psvr::Context* context )
 
 	mVrSystem = context->getVrSystem();
 
-	mRenderModels.resize( ::vr::k_unMaxTrackedDeviceCount );	
+	mRenderModels.resize( ::vr::k_unMaxTrackedDeviceCount );
 
 	setupShaders();
 	setupMatrices();
@@ -399,16 +399,6 @@ void Hmd::unbind()
 {
 	mRenderTargetLeft->unbindFramebuffer();
 	mRenderTargetRight->unbindFramebuffer();
-
-/*
-	submitFrame();
-	updatePoseData(); 
-
-	const auto& pose = mContext->getPose( ::vr::k_unTrackedDeviceIndex_Hmd );
-	if( pose.bPoseIsValid ) {
-		updateElapsedFrames();
-	}
-*/
 }
 
 void Hmd::submitFrame(){
@@ -672,8 +662,9 @@ void Hmd::activateRenderModel( ::vr::TrackedDeviceIndex_t trackedDeviceIndex )
 
 		CI_LOG_I( "...added: " << renderModelName );
 	}
-}
+}*/
 
 }}} // namespace cinder::vr::psvr
 
 #endif // defined( CINDER_VR_ENABLE_PSVR )
+

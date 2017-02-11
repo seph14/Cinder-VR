@@ -30,13 +30,11 @@
 
 #if defined( CINDER_VR_ENABLE_PSVR )
 
-#include "psvr.h"
+#include "psvrapi.h"
 
 namespace cinder { namespace vr { namespace psvr  {
 
 class Context;
-class RenderModel;
-using RenderModelRef = std::shared_ptr<RenderModel>;
 
 class Hmd;
 using HmdRef = std::shared_ptr<Hmd>;
@@ -70,14 +68,7 @@ public:
 	virtual void						calculateOriginMatrix() override;
 	virtual void						calculateInputRay() override;
 
-	virtual void						drawControllers( ci::vr::Eye eyeType ) override;
 	virtual void						drawDebugInfo() override;
-
-	// ---------------------------------------------------------------------------------------------
-	// Public methods
-	// ---------------------------------------------------------------------------------------------
-
-	void								activateRenderModel( ::vr::TrackedDeviceIndex_t trackedDeviceIndex );
 
 protected:
 	// ---------------------------------------------------------------------------------------------
@@ -94,8 +85,10 @@ private:
 	friend ci::vr::psvr::Context;
 
 	ci::vr::psvr::Context				*mContext = nullptr;
-	psvr::PSVRRef 						mVrSystem;
+	::PSVRApi::PSVRContextRef           mVrSystem;
+
 	ci::gl::GlslProgRef					mDistortionShader;
+	ci::gl::GlslProgRef 				mDebugShader;
 
 	ci::ivec3							mSceneVolume = ci::ivec3( 20, 20, 20 );
 	float								mNearClip = 0.1f;
@@ -110,8 +103,6 @@ private:
 	uint32_t							mDistortionIndexCount = 0;
 	ci::gl::BatchRef					mDistortionBatch;
 
-	std::vector<RenderModelRef>			mRenderModels;
-
 	void								setupShaders();
 	void								setupMatrices();
 	void								setupStereoRenderTargets();
@@ -119,8 +110,6 @@ private:
 	void								setupRenderModels();
 	void								setupCompositor();
 
-	void								updatePoseData();
-	void								updateControllerGeometry();
 };
 
 }}} // namespace cinder::vr::psvr

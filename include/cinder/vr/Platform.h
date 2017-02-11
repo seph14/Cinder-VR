@@ -44,8 +44,10 @@
 #include "cinder/Quaternion.h"
 #include "cinder/Vector.h"
 
-#define CINDER_VR_ENABLE_OCULUS
-#define CINDER_VR_ENABLE_OPENVR
+#if defined( CINDER_MSW )
+    #define CINDER_VR_ENABLE_OCULUS
+    #define CINDER_VR_ENABLE_OPENVR
+#endif
 #define CINDER_VR_ENABLE_PSVR
 
 namespace cinder { namespace vr {
@@ -57,6 +59,7 @@ enum Api {
 
 	// Starting point for custom device API id's
 	API_CUSTOM	= 0x40000000,
+    API_PSVR    = 0x40000001,
 
 	API_MAX		= 0x7FFFFFFF,
 	API_ANY		= API_MAX,
