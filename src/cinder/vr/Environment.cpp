@@ -209,7 +209,7 @@ void initialize( ci::vr::ApiFlags apiFlags )
 #endif
         
 #if defined( CINDER_VR_ENABLE_PSVR )
-        if( ci::vr::API_OPENVR == ( apiFlags & ci::vr::API_PSVR ) ) {
+        if( ci::vr::API_PSVR == ( apiFlags & ci::vr::API_PSVR ) ) {
             try {
                 ci::vr::psvr::DeviceManager* deviceManager = new ci::vr::psvr::DeviceManager( sEnvironment.get() );
                 deviceManager->initialize();

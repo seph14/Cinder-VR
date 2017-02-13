@@ -21,20 +21,16 @@ namespace cinder { namespace vr { namespace psvr {
     // DeviceManager
     // -------------------------------------------------------------------------------------------------
     DeviceManager::DeviceManager( ci::vr::Environment *env )
-    : ci::vr::DeviceManager( ci::vr::API_PSVR, kDeviceVendorName, env )
-    {
+    : ci::vr::DeviceManager( ci::vr::API_PSVR, kDeviceVendorName, env ) {
         //we could optionally list all psvr devices here and throw the error out now
         /*if( PSVRApi::PSVRContext::listPSVR().size() < 1 ) {
             throw ci::vr::psvr::Exception( "PSVR is not present" );
         }*/
     }
     
-    DeviceManager::~DeviceManager()
-    {
-    }
+    DeviceManager::~DeviceManager(){}
     
-    void DeviceManager::initialize()
-    {
+    void DeviceManager::initialize(){
         CI_LOG_I( "Initializing devices for Playstation VR" );
         
         mVrSystem = PSVRApi::PSVRContext::initPSVR();
@@ -44,29 +40,27 @@ namespace cinder { namespace vr { namespace psvr {
         
         mVrSystem->infoReport.connect(std::bind(&DeviceManager::setInfo, this,
                                                 std::placeholders::_1, std::placeholders::_1));
+        mVrSystem->turnHeadSetOn();
+        mVrSystem->enableVR();
     }
     
-    void DeviceManager::destroy()
-    {
+    void DeviceManager::destroy(){
         CI_LOG_I( "Destroying and turnoff devices for Playstation VR" );
         mVrSystem->enableCinematicMode();
-        sleep(100);
         mVrSystem->turnHeadSetOff();
+        mVrSystem.reset();
     }
     
-    uint32_t DeviceManager::numDevices() const
-    {
+    uint32_t DeviceManager::numDevices() const {
         const uint32_t kMaxDevices = 1;
         return kMaxDevices;
     }
     
-    void DeviceManager::setInfo(std::string firmware, std::string serial)
-    {
+    void DeviceManager::setInfo(std::string firmware, std::string serial) {
         mDisplayName =  "PlaystationVR - Firmware: " + firmware + ", Serial: " + serial;
     }
     
-    ci::vr::ContextRef DeviceManager::createContext( const ci::vr::SessionOptions& sessionOptions, uint32_t deviceIndex )
-    {
+    ci::vr::ContextRef DeviceManager::createContext( const ci::vr::SessionOptions& sessionOptions, uint32_t deviceIndex ) {
         if( deviceIndex >= numDevices() ) {
             throw ci::vr::psvr::Exception( "Device index out of range, deviceIndex=" + std::to_string( deviceIndex ) + ", maxIndex=" + std::to_string( numDevices() ) );
         }

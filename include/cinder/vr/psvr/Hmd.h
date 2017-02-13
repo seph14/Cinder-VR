@@ -59,7 +59,7 @@ public:
 	virtual void						unbind() override;
 	virtual void						submitFrame() override;
 
-	virtual float						getFullFov() const;
+	virtual float						getFullFov() const override;
 
 	virtual ci::Area					getEyeViewport( ci::vr::Eye eye ) const override;
 
@@ -68,6 +68,7 @@ public:
 	virtual void						calculateOriginMatrix() override;
 	virtual void						calculateInputRay() override;
 
+    virtual void						drawControllers( ci::vr::Eye eyeType ) override { };
 	virtual void						drawDebugInfo() override;
 
 protected:
@@ -80,6 +81,10 @@ protected:
 
 	virtual void						drawMirroredImpl( const ci::Rectf& r ) override;
 
+    void                                setStatus(void *status);
+    const ci::mat4                      getHmdEyePoseMatrix(ci::vr::Eye eye);
+    const ci::mat4                      getHmdEyeProjectionMatrix(ci::vr::Eye eye, float nearClip, float farClip);
+    
 private:
 	Hmd( ci::vr::psvr::Context* context );
 	friend ci::vr::psvr::Context;
@@ -90,10 +95,13 @@ private:
 	ci::gl::GlslProgRef					mDistortionShader;
 	ci::gl::GlslProgRef 				mDebugShader;
 
-	ci::ivec3							mSceneVolume = ci::ivec3( 20, 20, 20 );
-	float								mNearClip = 0.1f;
-	float								mFarClip = 100.0f;
-
+	float								mNearClip    = 0.1f;
+	float								mFarClip     = 100.0f;
+    bool                                mLedLit      = false;
+    float                               mInitTime    = -1.f;
+    
+    ci::vec4                            mProjectVec, mUnprojectVec;
+    
 	ci::mat4							mEyeProjectionMatrix[ci::vr::EYE_COUNT];
 	ci::mat4							mEyePoseMatrix[ci::vr::EYE_COUNT];
 
@@ -107,9 +115,7 @@ private:
 	void								setupMatrices();
 	void								setupStereoRenderTargets();
 	void								setupDistortion();
-	void								setupRenderModels();
 	void								setupCompositor();
-
 };
 
 }}} // namespace cinder::vr::psvr

@@ -47,7 +47,6 @@ namespace cinder { namespace vr { namespace psvr  {
         
         virtual void						processEvents() override;
         
-        void                                setStatus(void *status);
         void                                onConnect(bool isConnected);
         void                                setUnsolicited(byte reportId, byte result, std::string message);
         void                                rotationUpdate(ci::quat quat, ci::vec3 dir);

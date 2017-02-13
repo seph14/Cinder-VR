@@ -48,7 +48,7 @@ Hmd::Hmd( ci::vr::Context* context )
 {
 	mEyes.push_back( ci::vr::EYE_LEFT );
 	mEyes.push_back( ci::vr::EYE_RIGHT );
-	mEyeCamera[ci::vr::EYE_LEFT] = ci::vr::CameraEye( ci::vr::EYE_LEFT );
+	mEyeCamera[ci::vr::EYE_LEFT]  = ci::vr::CameraEye( ci::vr::EYE_LEFT );
 	mEyeCamera[ci::vr::EYE_RIGHT] = ci::vr::CameraEye( ci::vr::EYE_RIGHT );
 	mHmdCamera = ci::vr::CameraEye( ci::vr::EYE_HMD );
 }
