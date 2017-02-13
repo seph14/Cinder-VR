@@ -346,7 +346,7 @@ void Hmd::bind(){
     
     //HMD matrix
     ci::quat orientation    = mContext->getDeviceOrientation();
-    ci::mat4 rotMat         = glm::affineInverse(glm::mat4_cast( orientation ));
+    ci::mat4 rotMat         = glm::lookAt(vec3(0.f), vec3(0,0,1), vec3(0,1,0)); //glm::mat4_cast(orientation);
     
     ci::vec3 position       = vec3(0.f);
     ci::mat4 posMat         = glm::translate( position );
@@ -370,7 +370,7 @@ void Hmd::bind(){
 }
 
 void Hmd::unbind(){
-	mRenderTargetLeft->unbindFramebuffer();
+    mRenderTargetLeft->unbindFramebuffer();
 	mRenderTargetRight->unbindFramebuffer();
     updateElapsedFrames();
 }
@@ -395,7 +395,7 @@ void Hmd::enableEye( ci::vr::Eye eye, ci::vr::CoordSys eyeMatrixMode ){
 			mRenderTargetLeft->bindFramebuffer();
 			ci::gl::viewport( mRenderTargetLeft->getSize() );
 			ci::gl::clear( mClearColor );
-		}
+        }
 		break;
 
 		case ci::vr::EYE_RIGHT: {
@@ -424,6 +424,8 @@ void Hmd::enableEye( ci::vr::Eye eye, ci::vr::CoordSys eyeMatrixMode ){
 	}
 
 	setMatricesEye( eye, eyeMatrixMode );
+    
+    ci::gl::multModelMatrix( glm::mat4_cast(mContext->getDeviceOrientation()) );
 }
 
 void Hmd::calculateOriginMatrix(){ }
