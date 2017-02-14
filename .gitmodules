@@ -1,0 +1,3 @@
+[submodule "ext/psvr"]
+	path = ext/psvr
+	url = https://github.com/seph14/Cinder-PSVR.git
