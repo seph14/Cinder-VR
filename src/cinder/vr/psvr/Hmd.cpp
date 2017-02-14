@@ -249,8 +249,8 @@ void Hmd::setupDistortion(){
 	for(int y = 0; y < lensGridSegmentCountV; y++){
 		for(int x = 0; x < lensGridSegmentCountH; x++){
 			VertexDesc vert	= VertexDesc();
-			vert.position	= ci::vec2( (float)x * mRenderTargetSize.x, (float)y * mRenderTargetSize.y );
-			vert.texCoord	= ci::vec2( (float)x, (float)y );
+			vert.position	= ci::vec2( (float)x * 0.5f, (float)y );
+			vert.texCoord	= ci::vec2( (float)x, 1.f - (float)y );
 			vertexData.push_back( vert );
 		}
 	}
@@ -259,8 +259,8 @@ void Hmd::setupDistortion(){
 	for(int y = 0; y < lensGridSegmentCountV; y++){
 		for(int x = 0; x < lensGridSegmentCountH; x++){
 			VertexDesc vert	= VertexDesc();
-			vert.position	= ci::vec2( mRenderTargetSize.x + (float)x * mRenderTargetSize.x, (float)y * mRenderTargetSize.y );
-			vert.texCoord	= ci::vec2( (float)x, (float)y );
+			vert.position	= ci::vec2( 0.5f + (float)x * 0.5f, (float)y );
+			vert.texCoord	= ci::vec2( (float)x, 1.f - (float)y );
 			vertexData.push_back( vert );
 		}
 	}
@@ -455,19 +455,10 @@ void Hmd::drawMirroredImpl( const ci::Rectf& r ){
 		case Hmd::MirrorMode::MIRROR_MODE_STEREO: {
 			ci::gl::ScopedGlslProg scopedShader( mDistortionShader );
 
-            float width = r.getWidth();
-            float height = r.getHeight();
-            ci::Rectf fittedRect = ci::Rectf( 0, 0, width / 2.0f, height );
-
-			//float w = r.getWidth() / 2.0f;
-			//float h = r.getHeight() / 2.0f;
-			// Offset and the scale to fit the rect
-			/*ci::mat4 m = ci::mat4();
-			m[0][0] =  w;
-			m[1][1] = -h;
-			m[3][0] =  w + r.x1;
-			m[3][1] =  h + r.y1;
-			ci::gl::multModelMatrix( m );*/
+            float w = r.getWidth();
+			float h = r.getHeight();
+			ci::gl::scale(w, h);
+            ci::gl::translate(r.x1,r.y1);
 
 			// Render left eye
             {
@@ -483,7 +474,7 @@ void Hmd::drawMirroredImpl( const ci::Rectf& r ){
 			}
 
 			// Render right eye
-			/*{
+			{
                 vec4 projectionRight   = (mProjectVec   + vec4(0.0, 0.0, 1.0, 0.0)) * vec4(1.0, 1.0, -1.0, 1.0);
                 vec4 unprojectionRight = (mUnprojectVec + vec4(0.0, 0.0, 1.0, 0.0)) * vec4(1.0, 1.0, -1.0, 1.0);
                 mDistortionShader->uniform("uProjection",   projectionRight);
@@ -494,7 +485,7 @@ void Hmd::drawMirroredImpl( const ci::Rectf& r ){
 				mDistortionShader->uniform( "uTex0", kTexUnit );
 				mDistortionBatch->draw( mDistortionIndexCount / 2, mDistortionIndexCount / 2 );
 				resolvedTex->unbind( kTexUnit );
-			}*/
+			}
 		}
 		break;
 
@@ -550,7 +541,7 @@ void Hmd::setStatus(void *status){
     //start after we are sure the headset is on seems fixed it
     if(mInitTime < 0.f && !stat->isCinematic)
         mInitTime = (float)ci::app::getElapsedSeconds() + 2.f;
-    if(stat->isHeadsetWorn){
+    if(stat->isHeadsetWorn && !stat->isCinematic){
         mMirrorMode = Hmd::MirrorMode::MIRROR_MODE_STEREO;
     }else{
         mMirrorMode = Hmd::MirrorMode::MIRROR_MODE_UNDISTORTED_STEREO;

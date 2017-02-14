@@ -41,7 +41,7 @@ namespace cinder { namespace vr { namespace psvr {
         mVrSystem->infoReport.connect(std::bind(&DeviceManager::setInfo, this,
                                                 std::placeholders::_1, std::placeholders::_1));
         mVrSystem->turnHeadSetOn();
-        //mVrSystem->enableVR();
+        mVrSystem->enableVR();
     }
     
     void DeviceManager::destroy(){
