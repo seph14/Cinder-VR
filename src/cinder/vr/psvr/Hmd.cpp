@@ -242,27 +242,36 @@ void Hmd::setupDistortion(){
 	std::vector<VertexDesc> vertexData;
 	std::vector<uint16_t> indices;
 
-    const int lensGridSegmentCountH = 3;
+    const int lensGridSegmentCountH = 2;
     const int lensGridSegmentCountV = 2;
-    float w = 1.0f/static_cast<float>( lensGridSegmentCountH - 1 );
-    float h = 1.0f/static_cast<float>( lensGridSegmentCountV - 1 );
-
+    
+    //left eye mesh
 	for(int y = 0; y < lensGridSegmentCountV; y++){
 		for(int x = 0; x < lensGridSegmentCountH; x++){
 			VertexDesc vert	= VertexDesc();
-			vert.position	= ci::vec2( (float)x / w * 2 * mRenderTargetSize.x, (float)y / h * mRenderTargetSize.y );
-			vert.texCoord	= ci::vec2( (float)x / w, (float)y / h );
+			vert.position	= ci::vec2( (float)x * mRenderTargetSize.x, (float)y * mRenderTargetSize.y );
+			vert.texCoord	= ci::vec2( (float)x, (float)y );
+			vertexData.push_back( vert );
+		}
+	}
+
+    //right eye mesh
+	for(int y = 0; y < lensGridSegmentCountV; y++){
+		for(int x = 0; x < lensGridSegmentCountH; x++){
+			VertexDesc vert	= VertexDesc();
+			vert.position	= ci::vec2( mRenderTargetSize.x + (float)x * mRenderTargetSize.x, (float)y * mRenderTargetSize.y );
+			vert.texCoord	= ci::vec2( (float)x, (float)y );
 			vertexData.push_back( vert );
 		}
 	}
 
 	// Left eye indices
-    indices.push_back( 0 ); indices.push_back( 1 ); indices.push_back( 4 );
-    indices.push_back( 0 ); indices.push_back( 4 ); indices.push_back( 3 );
+    indices.push_back( 0 ); indices.push_back( 1 ); indices.push_back( 3 );
+    indices.push_back( 0 ); indices.push_back( 3 ); indices.push_back( 2 );
     
 	// Right eye indices
-    indices.push_back( 1 ); indices.push_back( 2 ); indices.push_back( 5 );
-    indices.push_back( 1 ); indices.push_back( 5 ); indices.push_back( 4 );
+    indices.push_back( 4 ); indices.push_back( 5 ); indices.push_back( 7 );
+    indices.push_back( 4 ); indices.push_back( 7 ); indices.push_back( 6 );
     
 	// Distortion index count
 	mDistortionIndexCount = static_cast<uint32_t>( indices.size() );
@@ -299,7 +308,7 @@ void Hmd::onClipValueChange( float nearClip, float farClip ){
 }
 
 const ci::mat4 Hmd::getHmdEyeProjectionMatrix(ci::vr::Eye eye, float nearClip, float farClip){
-    float aspect  = 960.f / 1080.f;
+    const float aspect  = 960.f / 1080.f;
     return glm::perspectiveFov( glm::radians(kFullFov / aspect), 960.f, 1080.f, mNearClip, mFarClip );
     //return glm::perspective(glm::radians(kFullFov), (960.f / 1080.f), farClip, nearClip);
 }
@@ -346,7 +355,7 @@ void Hmd::bind(){
     
     //HMD matrix
     ci::quat orientation    = mContext->getDeviceOrientation();
-    ci::mat4 rotMat         = glm::lookAt(vec3(0.f), vec3(0,0,1), vec3(0,1,0)); //glm::mat4_cast(orientation);
+    ci::mat4 rotMat         = glm::mat4_cast(orientation);
     
     ci::vec3 position       = vec3(0.f);
     ci::mat4 posMat         = glm::translate( position );
@@ -424,8 +433,6 @@ void Hmd::enableEye( ci::vr::Eye eye, ci::vr::CoordSys eyeMatrixMode ){
 	}
 
 	setMatricesEye( eye, eyeMatrixMode );
-    
-    ci::gl::multModelMatrix( glm::mat4_cast(mContext->getDeviceOrientation()) );
 }
 
 void Hmd::calculateOriginMatrix(){ }
@@ -470,8 +477,8 @@ void Hmd::drawMirroredImpl( const ci::Rectf& r ){
 				auto resolvedTex = mRenderTargetLeft->getColorTexture();
 				resolvedTex->bind( kTexUnit );
 				mDistortionShader->uniform( "uTex0", kTexUnit );
-				ci::gl::drawSolidRect( fittedRect );
-                //mDistortionBatch->draw( 0, mDistortionIndexCount / 2 );
+				//ci::gl::drawSolidRect( fittedRect );
+                mDistortionBatch->draw( 0, mDistortionIndexCount / 2 );
 				resolvedTex->unbind( kTexUnit );
 			}
 
