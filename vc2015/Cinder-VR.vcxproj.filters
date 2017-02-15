@@ -40,6 +40,9 @@
     <Filter Include="Header Files\cinder\vr\psvr">
       <UniqueIdentifier>{5faaa08d-ac9d-4fb2-aff8-0f34fa873217}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\cinder\vr\psvr">
+      <UniqueIdentifier>{9744211c-5627-4556-b143-afb2bede2ab5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\cinder\vr\Context.h">
@@ -105,6 +108,18 @@
     <ClInclude Include="..\src\cinder\vr\IconRightHand.h">
       <Filter>Source Files\cinder\vr</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\cinder\vr\psvr\Context.h">
+      <Filter>Header Files\cinder\vr\psvr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\cinder\vr\psvr\DeviceManager.h">
+      <Filter>Header Files\cinder\vr\psvr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\cinder\vr\psvr\Hmd.h">
+      <Filter>Header Files\cinder\vr\psvr</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\cinder\vr\psvr\vrdevice.h">
+      <Filter>Header Files\cinder\vr\psvr</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\cinder\vr\Context.cpp">
@@ -157,6 +172,18 @@
     </ClCompile>
     <ClCompile Include="..\src\cinder\vr\SessionOptions.cpp">
       <Filter>Source Files\cinder\vr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cinder\vr\psvr\Context.cpp">
+      <Filter>Source Files\cinder\vr\psvr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cinder\vr\psvr\DeviceManager.cpp">
+      <Filter>Source Files\cinder\vr\psvr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cinder\vr\psvr\Hmd.cpp">
+      <Filter>Source Files\cinder\vr\psvr</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cinder\vr\psvr\vrdevice.cpp">
+      <Filter>Source Files\cinder\vr\psvr</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

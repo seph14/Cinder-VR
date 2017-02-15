@@ -38,6 +38,9 @@
 
 #pragma once
 
+//stupid vs 2015
+#define NOMINMAX
+
 #include "cinder/CinderAssert.h"
 #include "cinder/Cinder.h"
 #include "cinder/Exception.h"

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -36,6 +36,10 @@
     <ClInclude Include="..\include\cinder\vr\openvr\Hmd.h" />
     <ClInclude Include="..\include\cinder\vr\openvr\OpenVr.h" />
     <ClInclude Include="..\include\cinder\vr\Platform.h" />
+    <ClInclude Include="..\include\cinder\vr\psvr\Context.h" />
+    <ClInclude Include="..\include\cinder\vr\psvr\DeviceManager.h" />
+    <ClInclude Include="..\include\cinder\vr\psvr\Hmd.h" />
+    <ClInclude Include="..\include\cinder\vr\psvr\vrdevice.h" />
     <ClInclude Include="..\include\cinder\vr\SessionOptions.h" />
     <ClInclude Include="..\include\cinder\vr\Vr.h" />
     <ClInclude Include="..\src\cinder\vr\IconLeftHand.h" />
@@ -58,6 +62,10 @@
     <ClCompile Include="..\src\cinder\vr\openvr\DeviceManager.cpp" />
     <ClCompile Include="..\src\cinder\vr\openvr\Hmd.cpp" />
     <ClCompile Include="..\src\cinder\vr\openvr\OpenVr.cpp" />
+    <ClCompile Include="..\src\cinder\vr\psvr\Context.cpp" />
+    <ClCompile Include="..\src\cinder\vr\psvr\DeviceManager.cpp" />
+    <ClCompile Include="..\src\cinder\vr\psvr\Hmd.cpp" />
+    <ClCompile Include="..\src\cinder\vr\psvr\vrdevice.cpp" />
     <ClCompile Include="..\src\cinder\vr\SessionOptions.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -69,26 +77,26 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v120</PlatformToolset>
+    <PlatformToolset>v140</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -131,7 +139,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\include;..\..\..\include;..\ext\LibOVR\Include;..\ext\OpenVR\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;..\..\..\include;..\ext\LibOVR\Include;..\ext\OpenVR\headers;..\ext\psvr\include;..\ext\psvr\lib\msw\$(PlatformTarget)\cinder-psvr-$(PlatformToolset).lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ObjectFileName>$(IntDir)\$(PlatformTarget)\%(RelativeDir)\</ObjectFileName>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
@@ -150,7 +158,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\include;..\..\..\include;..\ext\LibOVR\Include;..\ext\OpenVR\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;..\..\..\include;..\ext\LibOVR\Include;..\ext\OpenVR\headers;..\ext\psvr\include;..\ext\psvr\lib\msw\$(PlatformTarget)\cinder-psvr-$(PlatformToolset).lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ObjectFileName>$(IntDir)\$(PlatformTarget)\%(RelativeDir)\</ObjectFileName>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
@@ -171,7 +179,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\include;..\..\..\include;..\ext\LibOVR\Include;..\ext\OpenVR\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;..\..\..\include;..\ext\LibOVR\Include;..\ext\OpenVR\headers;..\ext\psvr\include;..\ext\psvr\lib\msw\$(PlatformTarget)\cinder-psvr-$(PlatformToolset).lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ObjectFileName>$(IntDir)\$(PlatformTarget)\%(RelativeDir)\</ObjectFileName>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
@@ -191,7 +199,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\include;..\..\..\include;..\ext\LibOVR\Include;..\ext\OpenVR\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>..\include;..\..\..\include;..\ext\LibOVR\Include;..\ext\OpenVR\headers;..\ext\psvr\include;..\ext\psvr\lib\msw\$(PlatformTarget)\cinder-psvr-$(PlatformToolset).lib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <ObjectFileName>$(IntDir)\$(PlatformTarget)\%(RelativeDir)\</ObjectFileName>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>

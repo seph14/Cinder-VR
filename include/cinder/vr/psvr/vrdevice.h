@@ -1,4 +1,6 @@
 /*
+ This file is from PSVRFramework - https://github.com/gusmanb/PSVRFramework/blob/master/VRVideoPlayer/vrdevice.h
+
  * PSVRFramework - PlayStation VR PC framework
  * Copyright (C) 2016 Agustín Giménez Bernad <geniwab@gmail.com>
  *
@@ -18,6 +20,10 @@
 
 #ifndef vrdevice_h
 #define vrdevice_h
+
+#include "cinder/vr/Hmd.h"
+
+#if defined( CINDER_VR_ENABLE_PSVR )
 
 #include "cinder/Cinder.h"
 
@@ -80,10 +86,10 @@ namespace VRDevice{
         vrviewport undistortedLeftViewport;
         vrfov undistortedLeftFOV;
         vrfov distortedLeftFOV;
-        glm::mat4 distortedProjection;
-        glm::mat4 undistortedProjection;
-        glm::vec4 projectionLeft;
-        glm::vec4 unprojectionLeft;
+        glm::mat4 distortedProjection	= glm::mat4(1.f);
+        glm::mat4 undistortedProjection = glm::mat4(1.f);
+        glm::vec4 projectionLeft		= glm::vec4(1.f);
+        glm::vec4 unprojectionLeft		= glm::vec4(1.f);
     } vrdevicedata;
     
     const vrscreenprops PSVRScreenProps ={
@@ -108,3 +114,5 @@ namespace VRDevice{
 }
 
 #endif /* vrdevice_h */
+
+#endif // defined( CINDER_VR_ENABLE_PSVR )

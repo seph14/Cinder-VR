@@ -1,4 +1,21 @@
 /*
+Copyright (c) 2016-2017, Seph Li - All rights reserved.
+This code is intended for use with the Cinder C++ library: http://libcinder.org
+This file is part of Cinder-PSVR.
+Cinder-PSVR is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+Cinder-PSVR is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+You should have received a copy of the GNU General Public License
+along with Cinder-PSVR.  If not, see <http://www.gnu.org/licenses/>.
+
+
+This file is from PSVRFramework - https://github.com/gusmanb/PSVRFramework/blob/master/VRVideoPlayer/vrdevice.h
+
  * PSVRFramework - PlayStation VR PC framework
  * Copyright (C) 2016 Agustín Giménez Bernad <geniwab@gmail.com>
  *
@@ -16,7 +33,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-#include "vrdevice.h"
+#include "cinder/vr/psvr/vrdevice.h"
 #include <math.h>
 
 namespace VRDevice{
@@ -161,7 +178,7 @@ namespace VRDevice{
         vrphysicalprops* pprops = &deviceData->physicalProperties;
         pprops->widthMeters = (METERS_PER_INCH / screenProps->xDPI) * screenProps->xRes;
         pprops->heightMeters = (METERS_PER_INCH / screenProps->yDPI) * screenProps->yRes;
-        pprops->bevelMeters = 0.004; //Cardboard residual data, left to test it
+        pprops->bevelMeters = 0.004f; //Cardboard residual data, left to test it
         
         deviceData->distortedLeftFOV = getFieldOfViewLeftEye(screenProps, lensProps, pprops, false);
         deviceData->undistortedLeftFOV = getFieldOfViewLeftEye(screenProps, lensProps, pprops, true);
