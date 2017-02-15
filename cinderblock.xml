@@ -6,8 +6,8 @@
 	author=""
 	license=""
 	summary=""
-	url="https://github.com/cinder/Cinder-VR"
-	git="git://github.com/cinder/Cinder-VR.git"
+	url="https://github.com/seph14/Cinder-VR.git"
+	git="git://github.com/seph14/Cinder-VR.git"
 	>
 	<supports os="msw"/>
 	<supports os="macosx"/>
@@ -35,6 +35,18 @@
 		<libraryPath>ext/OpenVR/lib/msw/$(PlatformTarget)</libraryPath>
 		<buildCopy>ext/OpenVR/bin/msw/$(PlatformTarget)/openvr_api.dll</buildCopy>
 		<buildCopy>ext/OpenVR/bin/msw/$(PlatformTarget)/openvr_api.pdb</buildCopy>
+	</platform>
+	<platform os="macosx">
+		<platform config="debug">
+			<staticLibrary>lib/macosx/cinder-vr_d.a</staticLibrary>
+			<staticLibrary>ext/psvr/lib/macosx/cinder-psvr_d.a</staticLibrary>
+		</platform>
+		<platform config="release">
+			<staticLibrary>lib/macosx/cinder-vr.a</staticLibrary>
+			<staticLibrary>ext/psvr/lib/macosx/cinder-psvr.a</staticLibrary>
+		</platform>
+		<dynamicLibrary>ext/psvr/lib/macosx/libusb-1.0.0.dylib</dynamicLibrary>
+		<buildCopy>ext/psvr/lib/macosx/libusb-1.0.0.dylib</buildCopy>
 	</platform>
 </block>
 </cinder>
