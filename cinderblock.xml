@@ -9,20 +9,18 @@
 	url="https://github.com/cinder/Cinder-VR"
 	git="git://github.com/cinder/Cinder-VR.git"
 	>
+	<supports os="msw"/>
+	<supports os="macosx"/>
 
 	<includePath>include</includePath>
 	<includePath>ext/LibOVR/Include</includePath>
 	<includePath>ext/OpenVR/headers</includePath>
+    <includePath>ext/psvr/include</includePath>
     
     <headerPattern>include/cinder/vr/*.h</headerPattern>
-    <!--<headerPattern>include/cinder/vr/oculus/*.h</headerPattern>
-    <headerPattern>include/cinder/vr/openvr/*.h</headerPattern>-->
+    <headerPattern>include/cinder/vr/oculus/*.h</headerPattern>
+    <headerPattern>include/cinder/vr/openvr/*.h</headerPattern>
     <headerPattern>include/cinder/vr/psvr/*.h</headerPattern>
-    
-    <sourcePattern>src/cinder/vr/*.cpp</sourcePattern>
-    <!--<sourcePattern>src/cinder/vr/oculus/*.cpp</sourcePattern>
-    <sourcePattern>src/cinder/vr/openvr/*.cpp</sourcePattern>-->
-    <sourcePattern>src/cinder/vr/psvr/*.cpp</sourcePattern>
 
 	<platform os="msw">
 		<platform config="debug">
@@ -31,6 +29,8 @@
 		<platform config="release">
 			<staticLibrary>lib/msw/$(PlatformTarget)/cinder-vr-$(PlatformToolset).lib</staticLibrary>
 		</platform>
+		<staticLibrary>ext/psvr/lib/msw/$(PlatformTarget)/cinder-psvr-$(PlatformToolset).lib</staticLibrary>
+		<staticLibrary>ext/psvr/lib/msw/$(PlatformTarget)/libusb-$(PlatformToolset).lib</staticLibrary>
 		<libraryPath>ext/LibOVR/Lib/Windows/$(Platform)/Release/VS2013</libraryPath>
 		<libraryPath>ext/OpenVR/lib/msw/$(PlatformTarget)</libraryPath>
 		<buildCopy>ext/OpenVR/bin/msw/$(PlatformTarget)/openvr_api.dll</buildCopy>
