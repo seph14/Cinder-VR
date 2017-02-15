@@ -1,0 +1,566 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8D4BED231E54F0C20097BC6F /* Camera.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED091E54F0C20097BC6F /* Camera.h */; };
+		8D4BED241E54F0C20097BC6F /* Context.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED0A1E54F0C20097BC6F /* Context.h */; };
+		8D4BED251E54F0C20097BC6F /* Controller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED0B1E54F0C20097BC6F /* Controller.h */; };
+		8D4BED261E54F0C20097BC6F /* DeviceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED0C1E54F0C20097BC6F /* DeviceManager.h */; };
+		8D4BED271E54F0C20097BC6F /* Environment.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED0D1E54F0C20097BC6F /* Environment.h */; };
+		8D4BED281E54F0C20097BC6F /* Hmd.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED0E1E54F0C20097BC6F /* Hmd.h */; };
+		8D4BED291E54F0C20097BC6F /* Context.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED101E54F0C20097BC6F /* Context.h */; };
+		8D4BED2A1E54F0C20097BC6F /* Controller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED111E54F0C20097BC6F /* Controller.h */; };
+		8D4BED2B1E54F0C20097BC6F /* DeviceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED121E54F0C20097BC6F /* DeviceManager.h */; };
+		8D4BED2C1E54F0C20097BC6F /* Hmd.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED131E54F0C20097BC6F /* Hmd.h */; };
+		8D4BED2D1E54F0C20097BC6F /* Oculus.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED141E54F0C20097BC6F /* Oculus.h */; };
+		8D4BED2E1E54F0C20097BC6F /* Context.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED161E54F0C20097BC6F /* Context.h */; };
+		8D4BED2F1E54F0C20097BC6F /* Controller.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED171E54F0C20097BC6F /* Controller.h */; };
+		8D4BED301E54F0C20097BC6F /* DeviceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED181E54F0C20097BC6F /* DeviceManager.h */; };
+		8D4BED311E54F0C20097BC6F /* Hmd.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED191E54F0C20097BC6F /* Hmd.h */; };
+		8D4BED321E54F0C20097BC6F /* OpenVr.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED1A1E54F0C20097BC6F /* OpenVr.h */; };
+		8D4BED331E54F0C20097BC6F /* Platform.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED1B1E54F0C20097BC6F /* Platform.h */; };
+		8D4BED341E54F0C20097BC6F /* Context.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED1D1E54F0C20097BC6F /* Context.h */; };
+		8D4BED351E54F0C20097BC6F /* DeviceManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED1E1E54F0C20097BC6F /* DeviceManager.h */; };
+		8D4BED361E54F0C20097BC6F /* Hmd.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED1F1E54F0C20097BC6F /* Hmd.h */; };
+		8D4BED371E54F0C20097BC6F /* vrdevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED201E54F0C20097BC6F /* vrdevice.h */; };
+		8D4BED381E54F0C20097BC6F /* SessionOptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED211E54F0C20097BC6F /* SessionOptions.h */; };
+		8D4BED391E54F0C20097BC6F /* Vr.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED221E54F0C20097BC6F /* Vr.h */; };
+		8D4BED571E54F0CC0097BC6F /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED3D1E54F0CC0097BC6F /* Camera.cpp */; };
+		8D4BED581E54F0CC0097BC6F /* Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED3E1E54F0CC0097BC6F /* Context.cpp */; };
+		8D4BED591E54F0CC0097BC6F /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED3F1E54F0CC0097BC6F /* Controller.cpp */; };
+		8D4BED5A1E54F0CC0097BC6F /* DeviceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED401E54F0CC0097BC6F /* DeviceManager.cpp */; };
+		8D4BED5B1E54F0CC0097BC6F /* Environment.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED411E54F0CC0097BC6F /* Environment.cpp */; };
+		8D4BED5C1E54F0CC0097BC6F /* Hmd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED421E54F0CC0097BC6F /* Hmd.cpp */; };
+		8D4BED5D1E54F0CC0097BC6F /* IconLeftHand.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED431E54F0CC0097BC6F /* IconLeftHand.h */; };
+		8D4BED5E1E54F0CC0097BC6F /* IconRightHand.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4BED441E54F0CC0097BC6F /* IconRightHand.h */; };
+		8D4BED5F1E54F0CC0097BC6F /* Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED461E54F0CC0097BC6F /* Context.cpp */; };
+		8D4BED601E54F0CC0097BC6F /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED471E54F0CC0097BC6F /* Controller.cpp */; };
+		8D4BED611E54F0CC0097BC6F /* DeviceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED481E54F0CC0097BC6F /* DeviceManager.cpp */; };
+		8D4BED621E54F0CC0097BC6F /* Hmd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED491E54F0CC0097BC6F /* Hmd.cpp */; };
+		8D4BED631E54F0CC0097BC6F /* Oculus.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED4A1E54F0CC0097BC6F /* Oculus.cpp */; };
+		8D4BED641E54F0CC0097BC6F /* Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED4C1E54F0CC0097BC6F /* Context.cpp */; };
+		8D4BED651E54F0CC0097BC6F /* Controller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED4D1E54F0CC0097BC6F /* Controller.cpp */; };
+		8D4BED661E54F0CC0097BC6F /* DeviceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED4E1E54F0CC0097BC6F /* DeviceManager.cpp */; };
+		8D4BED671E54F0CC0097BC6F /* Hmd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED4F1E54F0CC0097BC6F /* Hmd.cpp */; };
+		8D4BED681E54F0CC0097BC6F /* OpenVr.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED501E54F0CC0097BC6F /* OpenVr.cpp */; };
+		8D4BED691E54F0CC0097BC6F /* Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED521E54F0CC0097BC6F /* Context.cpp */; };
+		8D4BED6A1E54F0CC0097BC6F /* DeviceManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED531E54F0CC0097BC6F /* DeviceManager.cpp */; };
+		8D4BED6B1E54F0CC0097BC6F /* Hmd.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED541E54F0CC0097BC6F /* Hmd.cpp */; };
+		8D4BED6C1E54F0CC0097BC6F /* vrdevice.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED551E54F0CC0097BC6F /* vrdevice.cpp */; };
+		8D4BED6D1E54F0CC0097BC6F /* SessionOptions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8D4BED561E54F0CC0097BC6F /* SessionOptions.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8D4BED091E54F0C20097BC6F /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		8D4BED0A1E54F0C20097BC6F /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
+		8D4BED0B1E54F0C20097BC6F /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		8D4BED0C1E54F0C20097BC6F /* DeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceManager.h; sourceTree = "<group>"; };
+		8D4BED0D1E54F0C20097BC6F /* Environment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Environment.h; sourceTree = "<group>"; };
+		8D4BED0E1E54F0C20097BC6F /* Hmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hmd.h; sourceTree = "<group>"; };
+		8D4BED101E54F0C20097BC6F /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
+		8D4BED111E54F0C20097BC6F /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		8D4BED121E54F0C20097BC6F /* DeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceManager.h; sourceTree = "<group>"; };
+		8D4BED131E54F0C20097BC6F /* Hmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hmd.h; sourceTree = "<group>"; };
+		8D4BED141E54F0C20097BC6F /* Oculus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Oculus.h; sourceTree = "<group>"; };
+		8D4BED161E54F0C20097BC6F /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
+		8D4BED171E54F0C20097BC6F /* Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Controller.h; sourceTree = "<group>"; };
+		8D4BED181E54F0C20097BC6F /* DeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceManager.h; sourceTree = "<group>"; };
+		8D4BED191E54F0C20097BC6F /* Hmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hmd.h; sourceTree = "<group>"; };
+		8D4BED1A1E54F0C20097BC6F /* OpenVr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenVr.h; sourceTree = "<group>"; };
+		8D4BED1B1E54F0C20097BC6F /* Platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Platform.h; sourceTree = "<group>"; };
+		8D4BED1D1E54F0C20097BC6F /* Context.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Context.h; sourceTree = "<group>"; };
+		8D4BED1E1E54F0C20097BC6F /* DeviceManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceManager.h; sourceTree = "<group>"; };
+		8D4BED1F1E54F0C20097BC6F /* Hmd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hmd.h; sourceTree = "<group>"; };
+		8D4BED201E54F0C20097BC6F /* vrdevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = vrdevice.h; sourceTree = "<group>"; };
+		8D4BED211E54F0C20097BC6F /* SessionOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionOptions.h; sourceTree = "<group>"; };
+		8D4BED221E54F0C20097BC6F /* Vr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vr.h; sourceTree = "<group>"; };
+		8D4BED3D1E54F0CC0097BC6F /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		8D4BED3E1E54F0CC0097BC6F /* Context.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Context.cpp; sourceTree = "<group>"; };
+		8D4BED3F1E54F0CC0097BC6F /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
+		8D4BED401E54F0CC0097BC6F /* DeviceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DeviceManager.cpp; sourceTree = "<group>"; };
+		8D4BED411E54F0CC0097BC6F /* Environment.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Environment.cpp; sourceTree = "<group>"; };
+		8D4BED421E54F0CC0097BC6F /* Hmd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hmd.cpp; sourceTree = "<group>"; };
+		8D4BED431E54F0CC0097BC6F /* IconLeftHand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconLeftHand.h; sourceTree = "<group>"; };
+		8D4BED441E54F0CC0097BC6F /* IconRightHand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IconRightHand.h; sourceTree = "<group>"; };
+		8D4BED461E54F0CC0097BC6F /* Context.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Context.cpp; sourceTree = "<group>"; };
+		8D4BED471E54F0CC0097BC6F /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
+		8D4BED481E54F0CC0097BC6F /* DeviceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DeviceManager.cpp; sourceTree = "<group>"; };
+		8D4BED491E54F0CC0097BC6F /* Hmd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hmd.cpp; sourceTree = "<group>"; };
+		8D4BED4A1E54F0CC0097BC6F /* Oculus.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Oculus.cpp; sourceTree = "<group>"; };
+		8D4BED4C1E54F0CC0097BC6F /* Context.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Context.cpp; sourceTree = "<group>"; };
+		8D4BED4D1E54F0CC0097BC6F /* Controller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Controller.cpp; sourceTree = "<group>"; };
+		8D4BED4E1E54F0CC0097BC6F /* DeviceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DeviceManager.cpp; sourceTree = "<group>"; };
+		8D4BED4F1E54F0CC0097BC6F /* Hmd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hmd.cpp; sourceTree = "<group>"; };
+		8D4BED501E54F0CC0097BC6F /* OpenVr.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OpenVr.cpp; sourceTree = "<group>"; };
+		8D4BED521E54F0CC0097BC6F /* Context.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Context.cpp; sourceTree = "<group>"; };
+		8D4BED531E54F0CC0097BC6F /* DeviceManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DeviceManager.cpp; sourceTree = "<group>"; };
+		8D4BED541E54F0CC0097BC6F /* Hmd.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hmd.cpp; sourceTree = "<group>"; };
+		8D4BED551E54F0CC0097BC6F /* vrdevice.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = vrdevice.cpp; sourceTree = "<group>"; };
+		8D4BED561E54F0CC0097BC6F /* SessionOptions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SessionOptions.cpp; sourceTree = "<group>"; };
+		8D5A5E6F1E54E7C300688AB1 /* cinder-vr.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "cinder-vr.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8D5A5E6C1E54E7C300688AB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8D4BED061E54F0C10097BC6F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				8D4BED071E54F0C10097BC6F /* cinder */,
+			);
+			name = include;
+			path = ../include;
+			sourceTree = "<group>";
+		};
+		8D4BED071E54F0C10097BC6F /* cinder */ = {
+			isa = PBXGroup;
+			children = (
+				8D4BED081E54F0C20097BC6F /* vr */,
+			);
+			path = cinder;
+			sourceTree = "<group>";
+		};
+		8D4BED081E54F0C20097BC6F /* vr */ = {
+			isa = PBXGroup;
+			children = (
+				8D4BED091E54F0C20097BC6F /* Camera.h */,
+				8D4BED0A1E54F0C20097BC6F /* Context.h */,
+				8D4BED0B1E54F0C20097BC6F /* Controller.h */,
+				8D4BED0C1E54F0C20097BC6F /* DeviceManager.h */,
+				8D4BED0D1E54F0C20097BC6F /* Environment.h */,
+				8D4BED0E1E54F0C20097BC6F /* Hmd.h */,
+				8D4BED0F1E54F0C20097BC6F /* oculus */,
+				8D4BED151E54F0C20097BC6F /* openvr */,
+				8D4BED1B1E54F0C20097BC6F /* Platform.h */,
+				8D4BED1C1E54F0C20097BC6F /* psvr */,
+				8D4BED211E54F0C20097BC6F /* SessionOptions.h */,
+				8D4BED221E54F0C20097BC6F /* Vr.h */,
+			);
+			path = vr;
+			sourceTree = "<group>";
+		};
+		8D4BED0F1E54F0C20097BC6F /* oculus */ = {
+			isa = PBXGroup;
+			children = (
+				8D4BED101E54F0C20097BC6F /* Context.h */,
+				8D4BED111E54F0C20097BC6F /* Controller.h */,
+				8D4BED121E54F0C20097BC6F /* DeviceManager.h */,
+				8D4BED131E54F0C20097BC6F /* Hmd.h */,
+				8D4BED141E54F0C20097BC6F /* Oculus.h */,
+			);
+			path = oculus;
+			sourceTree = "<group>";
+		};
+		8D4BED151E54F0C20097BC6F /* openvr */ = {
+			isa = PBXGroup;
+			children = (
+				8D4BED161E54F0C20097BC6F /* Context.h */,
+				8D4BED171E54F0C20097BC6F /* Controller.h */,
+				8D4BED181E54F0C20097BC6F /* DeviceManager.h */,
+				8D4BED191E54F0C20097BC6F /* Hmd.h */,
+				8D4BED1A1E54F0C20097BC6F /* OpenVr.h */,
+			);
+			path = openvr;
+			sourceTree = "<group>";
+		};
+		8D4BED1C1E54F0C20097BC6F /* psvr */ = {
+			isa = PBXGroup;
+			children = (
+				8D4BED1D1E54F0C20097BC6F /* Context.h */,
+				8D4BED1E1E54F0C20097BC6F /* DeviceManager.h */,
+				8D4BED1F1E54F0C20097BC6F /* Hmd.h */,
+				8D4BED201E54F0C20097BC6F /* vrdevice.h */,
+			);
+			path = psvr;
+			sourceTree = "<group>";
+		};
+		8D4BED3A1E54F0CC0097BC6F /* src */ = {
+			isa = PBXGroup;
+			children = (
+				8D4BED3B1E54F0CC0097BC6F /* cinder */,
+			);
+			name = src;
+			path = ../src;
+			sourceTree = "<group>";
+			usesTabs = 1;
+		};
+		8D4BED3B1E54F0CC0097BC6F /* cinder */ = {
+			isa = PBXGroup;
+			children = (
+				8D4BED3C1E54F0CC0097BC6F /* vr */,
+			);
+			name = cinder;
+			path = ../src/cinder;
+			sourceTree = SOURCE_ROOT;
+		};
+		8D4BED3C1E54F0CC0097BC6F /* vr */ = {
+			isa = PBXGroup;
+			children = (
+				8D4BED3D1E54F0CC0097BC6F /* Camera.cpp */,
+				8D4BED3E1E54F0CC0097BC6F /* Context.cpp */,
+				8D4BED3F1E54F0CC0097BC6F /* Controller.cpp */,
+				8D4BED401E54F0CC0097BC6F /* DeviceManager.cpp */,
+				8D4BED411E54F0CC0097BC6F /* Environment.cpp */,
+				8D4BED421E54F0CC0097BC6F /* Hmd.cpp */,
+				8D4BED431E54F0CC0097BC6F /* IconLeftHand.h */,
+				8D4BED441E54F0CC0097BC6F /* IconRightHand.h */,
+				8D4BED451E54F0CC0097BC6F /* oculus */,
+				8D4BED4B1E54F0CC0097BC6F /* openvr */,
+				8D4BED511E54F0CC0097BC6F /* psvr */,
+				8D4BED561E54F0CC0097BC6F /* SessionOptions.cpp */,
+			);
+			path = vr;
+			sourceTree = "<group>";
+		};
+		8D4BED451E54F0CC0097BC6F /* oculus */ = {
+			isa = PBXGroup;
+			children = (
+				8D4BED461E54F0CC0097BC6F /* Context.cpp */,
+				8D4BED471E54F0CC0097BC6F /* Controller.cpp */,
+				8D4BED481E54F0CC0097BC6F /* DeviceManager.cpp */,
+				8D4BED491E54F0CC0097BC6F /* Hmd.cpp */,
+				8D4BED4A1E54F0CC0097BC6F /* Oculus.cpp */,
+			);
+			path = oculus;
+			sourceTree = "<group>";
+		};
+		8D4BED4B1E54F0CC0097BC6F /* openvr */ = {
+			isa = PBXGroup;
+			children = (
+				8D4BED4C1E54F0CC0097BC6F /* Context.cpp */,
+				8D4BED4D1E54F0CC0097BC6F /* Controller.cpp */,
+				8D4BED4E1E54F0CC0097BC6F /* DeviceManager.cpp */,
+				8D4BED4F1E54F0CC0097BC6F /* Hmd.cpp */,
+				8D4BED501E54F0CC0097BC6F /* OpenVr.cpp */,
+			);
+			path = openvr;
+			sourceTree = "<group>";
+		};
+		8D4BED511E54F0CC0097BC6F /* psvr */ = {
+			isa = PBXGroup;
+			children = (
+				8D4BED521E54F0CC0097BC6F /* Context.cpp */,
+				8D4BED531E54F0CC0097BC6F /* DeviceManager.cpp */,
+				8D4BED541E54F0CC0097BC6F /* Hmd.cpp */,
+				8D4BED551E54F0CC0097BC6F /* vrdevice.cpp */,
+			);
+			path = psvr;
+			sourceTree = "<group>";
+		};
+		8D5A5E661E54E7C300688AB1 = {
+			isa = PBXGroup;
+			children = (
+				8D4BED061E54F0C10097BC6F /* include */,
+				8D5A5E701E54E7C300688AB1 /* Products */,
+				8D4BED3A1E54F0CC0097BC6F /* src */,
+			);
+			sourceTree = "<group>";
+		};
+		8D5A5E701E54E7C300688AB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8D5A5E6F1E54E7C300688AB1 /* cinder-vr.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		8D5A5E6D1E54E7C300688AB1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D4BED361E54F0C20097BC6F /* Hmd.h in Headers */,
+				8D4BED311E54F0C20097BC6F /* Hmd.h in Headers */,
+				8D4BED2C1E54F0C20097BC6F /* Hmd.h in Headers */,
+				8D4BED5D1E54F0CC0097BC6F /* IconLeftHand.h in Headers */,
+				8D4BED281E54F0C20097BC6F /* Hmd.h in Headers */,
+				8D4BED2D1E54F0C20097BC6F /* Oculus.h in Headers */,
+				8D4BED261E54F0C20097BC6F /* DeviceManager.h in Headers */,
+				8D4BED381E54F0C20097BC6F /* SessionOptions.h in Headers */,
+				8D4BED2F1E54F0C20097BC6F /* Controller.h in Headers */,
+				8D4BED2E1E54F0C20097BC6F /* Context.h in Headers */,
+				8D4BED371E54F0C20097BC6F /* vrdevice.h in Headers */,
+				8D4BED271E54F0C20097BC6F /* Environment.h in Headers */,
+				8D4BED321E54F0C20097BC6F /* OpenVr.h in Headers */,
+				8D4BED291E54F0C20097BC6F /* Context.h in Headers */,
+				8D4BED2B1E54F0C20097BC6F /* DeviceManager.h in Headers */,
+				8D4BED391E54F0C20097BC6F /* Vr.h in Headers */,
+				8D4BED241E54F0C20097BC6F /* Context.h in Headers */,
+				8D4BED251E54F0C20097BC6F /* Controller.h in Headers */,
+				8D4BED351E54F0C20097BC6F /* DeviceManager.h in Headers */,
+				8D4BED2A1E54F0C20097BC6F /* Controller.h in Headers */,
+				8D4BED331E54F0C20097BC6F /* Platform.h in Headers */,
+				8D4BED5E1E54F0CC0097BC6F /* IconRightHand.h in Headers */,
+				8D4BED301E54F0C20097BC6F /* DeviceManager.h in Headers */,
+				8D4BED341E54F0C20097BC6F /* Context.h in Headers */,
+				8D4BED231E54F0C20097BC6F /* Camera.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8D5A5E6E1E54E7C300688AB1 /* cinder-vr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8D5A5E731E54E7C300688AB1 /* Build configuration list for PBXNativeTarget "cinder-vr" */;
+			buildPhases = (
+				8D5A5E6B1E54E7C300688AB1 /* Sources */,
+				8D5A5E6C1E54E7C300688AB1 /* Frameworks */,
+				8D5A5E6D1E54E7C300688AB1 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "cinder-vr";
+			productName = "cinder-vr";
+			productReference = 8D5A5E6F1E54E7C300688AB1 /* cinder-vr.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8D5A5E671E54E7C300688AB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Seph Li";
+				TargetAttributes = {
+					8D5A5E6E1E54E7C300688AB1 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8D5A5E6A1E54E7C300688AB1 /* Build configuration list for PBXProject "cinder-vr" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8D5A5E661E54E7C300688AB1;
+			productRefGroup = 8D5A5E701E54E7C300688AB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8D5A5E6E1E54E7C300688AB1 /* cinder-vr */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8D5A5E6B1E54E7C300688AB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D4BED571E54F0CC0097BC6F /* Camera.cpp in Sources */,
+				8D4BED6D1E54F0CC0097BC6F /* SessionOptions.cpp in Sources */,
+				8D4BED5A1E54F0CC0097BC6F /* DeviceManager.cpp in Sources */,
+				8D4BED5B1E54F0CC0097BC6F /* Environment.cpp in Sources */,
+				8D4BED6A1E54F0CC0097BC6F /* DeviceManager.cpp in Sources */,
+				8D4BED631E54F0CC0097BC6F /* Oculus.cpp in Sources */,
+				8D4BED6C1E54F0CC0097BC6F /* vrdevice.cpp in Sources */,
+				8D4BED611E54F0CC0097BC6F /* DeviceManager.cpp in Sources */,
+				8D4BED6B1E54F0CC0097BC6F /* Hmd.cpp in Sources */,
+				8D4BED681E54F0CC0097BC6F /* OpenVr.cpp in Sources */,
+				8D4BED601E54F0CC0097BC6F /* Controller.cpp in Sources */,
+				8D4BED691E54F0CC0097BC6F /* Context.cpp in Sources */,
+				8D4BED5C1E54F0CC0097BC6F /* Hmd.cpp in Sources */,
+				8D4BED661E54F0CC0097BC6F /* DeviceManager.cpp in Sources */,
+				8D4BED591E54F0CC0097BC6F /* Controller.cpp in Sources */,
+				8D4BED671E54F0CC0097BC6F /* Hmd.cpp in Sources */,
+				8D4BED5F1E54F0CC0097BC6F /* Context.cpp in Sources */,
+				8D4BED641E54F0CC0097BC6F /* Context.cpp in Sources */,
+				8D4BED581E54F0CC0097BC6F /* Context.cpp in Sources */,
+				8D4BED651E54F0CC0097BC6F /* Controller.cpp in Sources */,
+				8D4BED621E54F0CC0097BC6F /* Hmd.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8D5A5E711E54E7C300688AB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ANALYZER_NONNULL = YES_NONAGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = NO;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = NO;
+				CLANG_WARN_ENUM_CONVERSION = NO;
+				CLANG_WARN_INFINITE_RECURSION = NO;
+				CLANG_WARN_INT_CONVERSION = NO;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = NO;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
+				CODE_SIGN_IDENTITY = "";
+				CONFIGURATION_BUILD_DIR = ../lib/macosx;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../ext/psvr/include,
+					../../../include,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OBJROOT = build/;
+				ONLY_ACTIVE_ARCH = NO;
+				SDKROOT = macosx;
+				SYMROOT = ../lib/macosx;
+				USER_HEADER_SEARCH_PATHS = "../../../include ../ext/psvr/include";
+			};
+			name = Debug;
+		};
+		8D5A5E721E54E7C300688AB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
+				CLANG_ANALYZER_NONNULL = YES_NONAGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				CLANG_WARN_BOOL_CONVERSION = NO;
+				CLANG_WARN_CONSTANT_CONVERSION = NO;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = NO;
+				CLANG_WARN_EMPTY_BODY = NO;
+				CLANG_WARN_ENUM_CONVERSION = NO;
+				CLANG_WARN_INFINITE_RECURSION = NO;
+				CLANG_WARN_INT_CONVERSION = NO;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = NO;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = NO;
+				CODE_SIGN_IDENTITY = "";
+				CONFIGURATION_BUILD_DIR = ../lib/macosx;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_NO_COMMON_BLOCKS = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_FUNCTION = NO;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					../ext/psvr/include,
+					../../../include,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OBJROOT = build/;
+				SDKROOT = macosx;
+				SYMROOT = ../lib/macosx;
+				USER_HEADER_SEARCH_PATHS = "../../../include ../ext/psvr/include";
+			};
+			name = Release;
+		};
+		8D5A5E741E54E7C300688AB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = "";
+				HEADER_SEARCH_PATHS = (
+					../ext/psvr/include,
+					../include,
+					../../../include,
+				);
+				OTHER_LDFLAGS = (
+					../../../lib/libcinder_d.a,
+					"../ext/psvr/lib/macosx/libusb-1.0.0.dylib",
+					"../ext/psvr/lib/macosx/cinder-psvr_d.a",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "../../../include ../ext/psvr/include";
+			};
+			name = Debug;
+		};
+		8D5A5E751E54E7C300688AB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = "";
+				HEADER_SEARCH_PATHS = (
+					../ext/psvr/include,
+					../include,
+					../../../include,
+				);
+				OTHER_LDFLAGS = (
+					../../../lib/libcinder.a,
+					"../ext/psvr/lib/macosx/libusb-1.0.0.dylib",
+					"../ext/psvr/lib/macosx/cinder-psvr_d.a",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "../../../include ../ext/psvr/include";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8D5A5E6A1E54E7C300688AB1 /* Build configuration list for PBXProject "cinder-vr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D5A5E711E54E7C300688AB1 /* Debug */,
+				8D5A5E721E54E7C300688AB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8D5A5E731E54E7C300688AB1 /* Build configuration list for PBXNativeTarget "cinder-vr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8D5A5E741E54E7C300688AB1 /* Debug */,
+				8D5A5E751E54E7C300688AB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8D5A5E671E54E7C300688AB1 /* Project object */;
+}
