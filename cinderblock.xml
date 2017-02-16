@@ -25,12 +25,14 @@
 	<platform os="msw">
 		<platform config="debug">
 			<staticLibrary>lib/msw/$(PlatformTarget)/cinder-vr-$(PlatformToolset)_d.lib</staticLibrary>
+			<staticLibrary>ext/psvr/lib/msw/$(PlatformTarget)/cinder-psvr-$(PlatformToolset)_d.lib</staticLibrary>
+			<staticLibrary>ext/psvr/lib/msw/$(PlatformTarget)/libusb-$(PlatformToolset)_d.lib</staticLibrary>
 		</platform>
 		<platform config="release">
 			<staticLibrary>lib/msw/$(PlatformTarget)/cinder-vr-$(PlatformToolset).lib</staticLibrary>
+			<staticLibrary>ext/psvr/lib/msw/$(PlatformTarget)/cinder-psvr-$(PlatformToolset).lib</staticLibrary>
+			<staticLibrary>ext/psvr/lib/msw/$(PlatformTarget)/libusb-$(PlatformToolset).lib</staticLibrary>
 		</platform>
-		<staticLibrary>ext/psvr/lib/msw/$(PlatformTarget)/cinder-psvr-$(PlatformToolset).lib</staticLibrary>
-		<staticLibrary>ext/psvr/lib/msw/$(PlatformTarget)/libusb-$(PlatformToolset).lib</staticLibrary>
 		<libraryPath>ext/LibOVR/Lib/Windows/$(Platform)/Release/VS2013</libraryPath>
 		<libraryPath>ext/OpenVR/lib/msw/$(PlatformTarget)</libraryPath>
 		<buildCopy>ext/OpenVR/bin/msw/$(PlatformTarget)/openvr_api.dll</buildCopy>
