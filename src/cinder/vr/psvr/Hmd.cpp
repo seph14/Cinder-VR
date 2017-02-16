@@ -458,7 +458,7 @@ void Hmd::calculateInputRay(){
 }
 
 void Hmd::drawMirroredImpl( const ci::Rectf& r ){
-	const uint32_t kTexUnit = 0;
+	const int kTexUnit = 0;
 
 	ci::gl::ScopedDepthTest scopedDepthTest( false );
 	ci::gl::ScopedModelMatrix scopedModelMatrix;
@@ -558,7 +558,7 @@ void Hmd::setStatus(void *status){
         mInitTime = (float)ci::app::getElapsedSeconds() + 2.f;
     if(stat->isHeadsetWorn && !stat->isCinematic){
         mMirrorMode = Hmd::MirrorMode::MIRROR_MODE_STEREO;
-    }else{
+	}else{
         mMirrorMode = Hmd::MirrorMode::MIRROR_MODE_UNDISTORTED_STEREO;
     }
     

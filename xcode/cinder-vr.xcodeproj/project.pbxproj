@@ -515,7 +515,7 @@
 					"../ext/psvr/lib/macosx/libusb-1.0.0.dylib",
 					"../ext/psvr/lib/macosx/cinder-psvr_d.a",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "$(TARGET_NAME)_d";
 				USER_HEADER_SEARCH_PATHS = "../../../include ../ext/psvr/include";
 			};
 			name = Debug;

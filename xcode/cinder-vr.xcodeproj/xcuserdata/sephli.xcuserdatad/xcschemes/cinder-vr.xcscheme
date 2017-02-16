@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8D5A5E6E1E54E7C300688AB1"
-               BuildableName = "libcinder-vr.a"
+               BuildableName = "cinder-vr.a"
                BlueprintName = "cinder-vr"
                ReferencedContainer = "container:cinder-vr.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
       </AdditionalOptions>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D5A5E6E1E54E7C300688AB1"
-            BuildableName = "libcinder-vr.a"
+            BuildableName = "cinder-vr.a"
             BlueprintName = "cinder-vr"
             ReferencedContainer = "container:cinder-vr.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8D5A5E6E1E54E7C300688AB1"
-            BuildableName = "libcinder-vr.a"
+            BuildableName = "cinder-vr.a"
             BlueprintName = "cinder-vr"
             ReferencedContainer = "container:cinder-vr.xcodeproj">
          </BuildableReference>
